@@ -62,7 +62,7 @@ A full-stack web application that allows users to upload legal documents (PDF), 
 
 ### 1. Clone Repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Subhajeetgit/legal-doc-analyzer
 cd Legal-Doc-Analyzer
 
 
