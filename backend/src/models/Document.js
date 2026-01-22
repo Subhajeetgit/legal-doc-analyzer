@@ -7,13 +7,42 @@ const documentSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-    filename: String,
-    fileId: mongoose.Schema.Types.ObjectId,
-    contentType: String,
-    createdAt: {
-      type: Date,
-      default: Date.now,
+
+    filename: {
+      type: String,
+      required: true,
     },
+
+    fileId: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+    },
+
+    contentType: {
+      type: String,
+      required: true,
+    },
+
+    extractedText: {
+      type: String,
+    },
+
+    analysis: {
+      summary: {
+        type: String,
+      },
+      clauses: {
+        type: [String],
+        default: [],
+      },
+      risks: {
+        type: [String],
+        default: [],
+      },
+    },
+  },
+  {
+    timestamps: true, 
   }
 );
 
